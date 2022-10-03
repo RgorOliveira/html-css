@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens, áudios e vídeos</h1>
+
+    <h2>Imagesn dinâmicas</h2>
+    <p>Tente abrir esse site em diferentes dispositimos, ou somente almente e diminua o tamanho do seu navegador.</p>
+
+    <p>Com o max-width</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <p>Com o min-width</p>
+
+    <picture>
+        <source media="(min-width: 1050px)" srcset="imagens/foto-g.png" type="image/png">
+        <source media="(min-width: 750px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-p.png" alt="Imagm flexível">
+    </picture>  
+    <hr>
+    <br>
+
+    <h2>Áudios</h2>
+    <p>Aprendendo a reproduzir áudios em HTML5.</p>
+    <p>Sem o source</p>
+    <audio src="midia/happy-mistake.mp3" controls autoplay></audio>
+    <br>
+
+    <p>Com o source</p>
+    <audio preload="metadata" controls loop>
+        <source src="midia/happy-mistake.mp3" type="audio/mpeg">
+        <source src="midia/happy-mistake.wav" type="audio/wav"> <!--WAV são arquismos muito grande, evitar usar-->
+        <source src="midia/happy-mistake.ogg" type="audio/ogg">
+        <p>Infelizmente o seu navegador não concegue reproduzir os áudios. <a href="midia/happy-mistake.mp3" download="happy-mistake.mp3" type="audio/mpeg">Use este link para fazer o download</a></p>
+    </audio>
+    <hr>
+</body>
+</html>
